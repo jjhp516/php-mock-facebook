@@ -15,13 +15,19 @@
             @include('global_nav')
         </header>
 
-        <div class="sidebar left-side">
+
+        <div class="sidebar left-side flex-column">
+
         </div>
 
-        <main>
+
+        <main class="flex-column">
+
         </main>
 
-        <div class="sidebar right-side">
+
+        <div class="sidebar right-side flex-column">
+            
         </div>
 
         <footer>
