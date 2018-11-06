@@ -12,3 +12,15 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  overflow-wrap: break-word;
+}
+
+// FB Styles
+@import './basic-layout.scss';
+@import './nav.scss';
+
+
