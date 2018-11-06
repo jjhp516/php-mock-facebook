@@ -19,8 +19,8 @@ class CreateUserProfilesTable extends Migration
             $table->text('education');
             $table->text('location');
             $table->text('homeTown');
-            $table->text('image');
-            $table->text('heroImage');
+            $table->text('profilePic');
+            $table->text('coverPic');
             $table->timestamps();
         });
     }

@@ -10,7 +10,7 @@ use Faker\Factory;
 class User {}
 class Posting {}
 
-class TimelineController extends Controller
+class PostingsController extends Controller
 {
     //
     public function index() {

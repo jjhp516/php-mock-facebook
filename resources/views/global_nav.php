@@ -16,7 +16,7 @@
     <div class="d-flex">
         <div class="nav-links">
                 <a class="user-link" href="#">
-                    <img src=<?php echo $viewer->profilePic ?>> 
+                    <img class="profilePicSmall" src=<?php echo $viewer->profilePic ?>> 
                     <?php echo $viewer->name ?>
                 </a>
                 <a href="#">Home</a>

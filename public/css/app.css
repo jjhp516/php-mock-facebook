@@ -10558,6 +10558,13 @@ nav {
   border-radius: 0 3px 3px 0;
 }
 
+.profilePicSmall {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
 .nav-links a {
   color: white;
   font-size: 13px;
