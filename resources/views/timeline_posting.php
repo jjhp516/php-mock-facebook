@@ -1,4 +1,4 @@
-<!-- cut the shit out of this -->
+<!-- edit the shit out of this -->
 
 <?php foreach($postings as $posting): ?>
     <div class="feed-wrapper">
@@ -13,8 +13,11 @@
                         <a class="poster-name" href="#"><?php echo $posting->user->profile->name ?></a>
                         
                         <div>                                    
-                            <a class="time-stamp" href="#"><?php echo $posting->profile->timeStamp ?> &#183;</a>
-                            <button class="access"><i class="fas fa-globe-americas fa-sm"><i class="fas fa-caret-down fa-sm ml-1"></i></i></a>
+                            <a class="time-stamp" href="#"><?php echo $posting->created_at->format('M j') ?> &#183;</a>
+                            <button class="access">
+                                <i class="fas fa-globe-americas fa-sm"></i>
+                                <i class="fas fa-caret-down fa-sm"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -40,13 +43,7 @@
                 </a>
 
                 <div class="comment-area d-flex">
-                    <textarea  
-                        class ="comment-box" 
-                        id="commentBox" 
-                        name="commentBox" 
-                        placeholder="Write a comment..." 
-                        rows="1">
-                    </textarea>
+                    <textarea class ="comment-box" id="commentBox" name="commentBox" placeholder="Write a comment..." rows="1"></textarea>
                     
                     <div class="commentBtns d-flex">
                         <button><i class="far fa-smile"></i></button>

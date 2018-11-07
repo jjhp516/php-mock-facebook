@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             $profile->education = 'SAIT';
             $profile->location = $faker->city.', '.$faker->stateAbbr;
             $profile->hometown = $faker->city.', '.$faker->stateAbbr;
-            $profile->profilePic = 'https://picsum.photos/200/?random'.rand(1, 20);
+            $profile->pic = 'https://picsum.photos/200/?random'.rand(1, 20);
             $profile->coverPic = 'https://picsum.photos/1500/500/?random'.rand(1, 20);
             $profile->save();
 

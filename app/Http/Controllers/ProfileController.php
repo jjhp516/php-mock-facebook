@@ -8,8 +8,7 @@ use App\User;
 
 class ProfileController extends Controller
 {
-    public function index()
-    {
+    public function index() {
         // get the currently logged in user
         $user = request()->user();
 
@@ -28,8 +27,8 @@ class ProfileController extends Controller
         return view('profile_form', $viewData);
     }
 
-    public function update()
-    {
+    
+    public function update() {
         // get the currently logged-in user
         $user = request()->user();
 

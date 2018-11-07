@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Faker\Factory;
-use App\Model\Posting;
+use App\Models\Posting;
 use App\User;
 
 class PostingsController extends Controller
@@ -24,6 +24,7 @@ class PostingsController extends Controller
         return view('/welcome', $viewData);
     }
 
+
     public function getPrimaryUser($id)
     {
         $primaryUser = User::findOrFail($id);
@@ -31,11 +32,13 @@ class PostingsController extends Controller
         return $primaryUser;
     }
 
+
     public function getPeopleYouMayKnow($primaryUser)
     {
         return User::where('id', '!=', $primaryUser->id)->get();
     }
 
+    
     public function getPostings($primaryUser)
     {
         $postings = Posting::where('user_id', $primaryUser->id)->get();
