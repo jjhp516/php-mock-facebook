@@ -11,8 +11,6 @@ class PostsController extends Controller
 {
     public function index() {
         $allPosts = $this->getAllPosts();
-
-       return var_dump($allPosts);
     }
 
 
