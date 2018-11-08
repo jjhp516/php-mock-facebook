@@ -10492,8 +10492,8 @@ a.text-dark:focus {
 header {
   background: #4267b2;
   border-bottom: 1px solid #1d3050;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   z-index: 100;
@@ -10618,39 +10618,47 @@ nav {
   right: 18px;
 }
 
-.profile-pic {
+.profile-user {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: -24px;
+  left: 12%;
+}
+
+.profile-user .profile-pic {
   width: 160px;
   height: 160px;
   border: 4px solid white;
   border-radius: 50%;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
-  position: absolute;
-  bottom: -24px;
-  left: 15px;
 }
 
-.profile-name {
+.profile-user .profile-name {
   color: white;
   font-size: 24px;
   font-weight: 900;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
-  position: absolute;
-  bottom: 8px;
-  left: 190px;
+  margin: 50px 0 0 20px;
 }
 
 .profile-menu {
-  padding-left: 201px;
-  background-color: #fff;
+  background-color: white;
   height: 44px;
   border-bottom: 1px solid #dddfe2;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .profile-menu .menu-item {

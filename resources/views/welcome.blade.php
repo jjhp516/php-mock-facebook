@@ -12,9 +12,10 @@
                     <button class="timeline-settings"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
 
-                <img class="profile-pic" src=<?php echo $user->profile->pic ?>>
-
-                <div class="profile-name"><?php echo $user->name ?></div>
+                <div class="profile-user d-flex">
+                    <img class="profile-pic" src=<?php echo $user->profile->pic ?>>
+                    <div class="profile-name"><?php echo $user->name ?></div>
+                </div>
             </div>
 
             <div class="profile-menu">
