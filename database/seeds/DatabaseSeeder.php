@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\User;
 use App\Models\Profile;
-use App\Models\Posting;
+use App\Models\Post;
 use Faker\Factory;
 
 
@@ -37,10 +37,10 @@ class DatabaseSeeder extends Seeder
 
             $count = rand(2, 5);
             for ($j=0; $j < $count; $j++) {
-                $posting = new Posting();
-                $posting->content = $faker->paragraph;
-                $posting->user_id = $user->id;
-                $posting->save();
+                $post = new Post();
+                $post->content = $faker->paragraph;
+                $post->user_id = $user->id;
+                $post->save();
             }
         }
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostingsTable extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreatePostingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('postings', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->text('content');
-            $table->unsignedInteger('user_id'); //foreign key over to user table
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreatePostingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('postings');
+        Schema::dropIfExists('posts');
     }
 }

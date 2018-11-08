@@ -22,7 +22,7 @@
 
 
         <main class="flex-column">
-            @include('timeline_posting')
+            @yield('main-content')
         </main>
 
 

@@ -1,0 +1,155 @@
+// edit the shit out of this
+.feed-wrapper {
+    width: 517px;
+    padding: 0;
+}
+
+
+
+.feed {
+    padding: 12px 12px 0;
+    border-bottom: $border;
+}
+
+
+
+.feed-headline {
+    position: relative;
+
+    .more-options {
+        position: absolute;
+        top: -4px;
+        right: -2px;
+
+        i {
+            color: $text-3;
+        }
+    }
+}
+
+
+
+.poster-pic {
+    width: 40px;
+    height: 40px;
+    border: $border;
+    border-radius: 50%;
+}
+
+
+
+.poster-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: $fb-blue2;
+}
+
+
+
+.time-stamp {
+    font-size: 12px;
+    color: $text-3;
+}
+
+
+
+.feed-content {
+    padding-bottom: 8px;
+    border-bottom: $border;
+}
+
+
+
+.feedback {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    align-items: center;
+    color: $text-3;
+
+    a{
+        width: 30%;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+
+
+.comment-section {
+    padding: 8px 12px;
+    align-items: center;
+}
+
+
+
+.commenter-pic {
+    @extend .poster-pic;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.comment-area {
+    width: calc(100% - 30px);
+    border: $border;
+    border-radius: 18px;
+    background: $bg2;
+}
+
+
+
+.comment-box {
+    width: 100%;
+    padding: 2px 8px;
+    border-color: transparent;
+    border-radius: 18px 0 0 18px;
+    resize: none;
+    background: $bg2;
+}
+
+
+
+.comment-box:focus {
+    outline: none;
+    border-color: $outline;
+}
+
+
+
+.commentBtns {
+    margin-left: auto;
+    padding-right: 4px;
+    border-radius: 0 18px 18px 0;
+
+    button {
+        border: none;
+        background: none;
+        color: $text-2;
+
+        i {
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+.instructions {
+    font-size: 9px;
+    color: $text-2;
+    margin-left: 34px;
+    margin-top: 2px;
+}
+
+
+
+.access {
+    background: none;
+    border: none;
+    padding: 0;
+    color: $text-3;
+}
+

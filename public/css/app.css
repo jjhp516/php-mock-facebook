@@ -10480,41 +10480,46 @@ a.text-dark:focus {
 }
 
 .wrapper {
-  background: #f8fafc;
+  background: #e9ebee;
   display: grid;
-  grid-template-columns: repeat(12, minmax(90px, 1fr));
-  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, minmax(-webkit-min-content, 1fr));
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
   grid-gap: 12px;
 }
 
 header {
   background: #4267b2;
-  grid-area: 1 / 1 / 2 / 13;
+  border-bottom: 1px solid #1d3050;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
 }
 
 .left-side {
-  background: pink;
-  grid-column: 1 / 4;
-  height: 100vh;
+  grid-column: 1 / 2;
 }
 
 main {
-  background: pink;
-  grid-column: 4 / 10;
-  height: 100vh;
+  grid-column: 2 / 3;
 }
 
 .right-side {
-  background: pink;
-  grid-column: 10 / 13;
-  height: 100vh;
+  grid-column: 3 / 4;
+}
+
+.placard {
+  background-color: white;
+  border: 1px solid #dddfe2;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 nav {
-  width: 80%;
-  max-width: 1400px;
+  width: 1000px;
   height: 42px;
   margin: auto;
+  padding: 0 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -10585,152 +10590,6 @@ nav {
   padding: 0 4px;
 }
 
-.timeline {
-  margin: 0 auto;
-  max-width: 851px;
-}
-
-.timeline-header {
-  border-radius: 0 0 3px 3px;
-  margin-bottom: 12px;
-}
-
-.cover-photo {
-  height: 316px;
-  background-color: rgba(0, 0, 0, 0.4);
-  background-size: cover;
-  background-position: 50% 100%;
-  position: relative;
-}
-
-.cover-photo .button-group {
-  display: inline-block;
-  position: absolute;
-  bottom: 16px;
-  right: 18px;
-}
-
-.profile-pic {
-  width: 160px;
-  height: 160px;
-  border: 4px solid #fff;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
-  position: absolute;
-  bottom: -24px;
-  left: 15px;
-}
-
-.profile-name {
-  color: white;
-  font-size: 24px;
-  font-weight: 900;
-  text-rendering: optimizeLegibility;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
-  position: absolute;
-  bottom: 8px;
-  left: 190px;
-}
-
-.profile-menu {
-  padding-left: 201px;
-  background-color: #fff;
-  height: 44px;
-  border-bottom: 1px solid #dddfe2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.profile-menu .menu-item {
-  color: #3490dc;
-  padding: 0 17px;
-  font-size: 1em;
-  font-weight: 700;
-  border-left: 1px solid #dddfe2;
-}
-
-.profile-menu .menu-item:last-child {
-  border-right: 1px solid #dddfe2;
-}
-
-.timeline-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.sidebar-card,
-.friend-request,
-.feed-wrapper {
-  width: 321px;
-  min-height: 100px;
-  margin-bottom: 12px;
-  background-color: #fff;
-  border: 1px solid #dddfe2;
-}
-
-.card-heading {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 12px;
-}
-
-.card-heading .circle1,
-.card-heading .circle2,
-.card-heading .circle3 {
-  height: 22px;
-  width: 22px;
-  margin-right: 8px;
-  background-color: #4267b2;
-  border-radius: 50%;
-}
-
-.card-heading .circle2 {
-  background-color: yellowgreen;
-}
-
-.card-heading .circle3 {
-  background-color: deeppink;
-}
-
-.card-heading p {
-  font-size: 16px;
-  margin: 0;
-}
-
-.col3-grid {
-  margin: 0 0 6px;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 101px);
-  grid-template-rows: repeat(3, 101px);
-  grid-gap: 3px;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.col3-grid li {
-  background-color: lightblue;
-  list-style: none;
-}
-
-.friend-request {
-  width: 100%;
-}
-
-.feeds {
-  margin-left: 12px;
-}
-
 .feed-wrapper {
   width: 517px;
   padding: 0;
@@ -10765,7 +10624,8 @@ nav {
 
 .poster-name {
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 700;
+  color: #3b5998;
 }
 
 .time-stamp {
@@ -10811,7 +10671,7 @@ nav {
   width: calc(100% - 30px);
   border: 1px solid #dddfe2;
   border-radius: 18px;
-  background: #f8fafc;
+  background: #f5f6f7;
 }
 
 .comment-box {
@@ -10820,7 +10680,7 @@ nav {
   border-color: transparent;
   border-radius: 18px 0 0 18px;
   resize: none;
-  background: #f8fafc;
+  background: #f5f6f7;
 }
 
 .comment-box:focus {
@@ -10845,9 +10705,10 @@ nav {
 }
 
 .instructions {
-  font-size: 10px;
+  font-size: 9px;
   color: #90949c;
   margin-left: 34px;
+  margin-top: 2px;
 }
 
 .access {

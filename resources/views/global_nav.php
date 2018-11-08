@@ -1,6 +1,6 @@
 <nav class="d-flex">
-    <a href="#" class="mr-2"><i class="fab fa-facebook"></i></a>
 
+    <a href="#" class="mr-2"><i class="fab fa-facebook"></i></a>
 
     <div class="search-control">
         <div class="search-bar d-flex">
@@ -16,8 +16,8 @@
     <div class="d-flex">
         <div class="nav-links">
                 <a class="user-link" href="#">
-                    <img class="profilePicSmall" src=<?php echo $user->profile->pic ?>> 
-                    <?php echo $user->name ?>
+                    <img class="profilePicSmall" src=<?php echo $loggedInUser->profile->pic ?>> 
+                    <?php echo $loggedInUser->name ?>
                 </a>
                 <a href="#">Home</a>
                 <a href="#">Find Friends</a>

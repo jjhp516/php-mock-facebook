@@ -1,19 +1,19 @@
 <!-- edit the shit out of this -->
 
-<?php foreach($postings as $posting): ?>
-    <div class="feed-wrapper">
+<?php foreach($posts as $post): ?>
+    <div class="feed-wrapper placard">
         <div class="feed">
             <div class="feed-headline d-flex mb-1">
                 <div class="d-flex">
-                    <a class="user-link" href="#">
-                        <img class="poster-pic" src=<?php echo $posting->user->profile->pic ?>>
+                    <a href="#">
+                        <img class="poster-pic" src=<?php echo $post->user->profile->pic ?>>
                     </a>
 
                     <div class="poster flex-column ml-2"> 
-                        <a class="poster-name" href="#"><?php echo $posting->user->profile->name ?></a>
+                        <a class="poster-name" href="#"><?php echo $post->user->name ?></a>
                         
                         <div>                                    
-                            <a class="time-stamp" href="#"><?php echo $posting->created_at->format('M j') ?> &#183;</a>
+                            <a class="time-stamp" href="#"><?php echo $post->created_at->format('F j \a\t h:iA') ?> &#183;</a>
                             <button class="access">
                                 <i class="fas fa-globe-americas fa-sm"></i>
                                 <i class="fas fa-caret-down fa-sm"></i>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="feed-content">
-                <?php echo $posting->content ?>
+                <?php echo $post->content ?>
             </div>
 
             <div class="feedback d-flex">
@@ -38,8 +38,8 @@
 
         <div class="comment-section">
             <div class="d-flex">
-                <a class="user-link mr-1" href="#">
-                    <img class="commenter-pic" src=<?php echo $posting->user->profile->pic ?>>
+                <a class="mr-1" href="#">
+                    <img class="commenter-pic" src=<?php echo $loggedInUser->profile->pic ?>>
                 </a>
 
                 <div class="comment-area d-flex">
