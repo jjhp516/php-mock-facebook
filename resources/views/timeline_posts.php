@@ -1,5 +1,3 @@
-<!-- edit the shit out of this -->
-
 <?php foreach($posts as $post): ?>
     <div class="feed-wrapper placard">
         <div class="feed">
