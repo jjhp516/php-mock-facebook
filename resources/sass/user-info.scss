@@ -1,0 +1,33 @@
+.user-info {
+    width: 321px;
+    padding: 10px 12px 0;
+    margin-left: auto;
+}
+
+.blue-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $fb-blue;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        display: block;
+        color: white;
+        margin-right: 1px;
+    }
+}
+
+
+.intro {
+    margin: 10px 5px;
+    padding: 0;
+
+    li {
+        list-style: none;
+        font-size: 12px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+}

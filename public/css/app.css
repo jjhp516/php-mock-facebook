@@ -10590,6 +10590,43 @@ nav {
   padding: 0 4px;
 }
 
+.user-info {
+  width: 321px;
+  padding: 10px 12px 0;
+  margin-left: auto;
+}
+
+.blue-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #4267b2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blue-circle i {
+  display: block;
+  color: white;
+  margin-right: 1px;
+}
+
+.intro {
+  margin: 10px 5px;
+  padding: 0;
+}
+
+.intro li {
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
 .feed-wrapper {
   width: 517px;
   padding: 0;
