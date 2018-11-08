@@ -15,6 +15,7 @@
             @include('global_nav')
         </header>
 
+        @yield('hero')
 
         <div class="sidebar left-side flex-column">
             @yield('left-sidebar')
