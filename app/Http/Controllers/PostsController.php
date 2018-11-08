@@ -10,7 +10,9 @@ use App\User;
 class PostsController extends Controller
 {
     public function index() {
-        return 'welcome';
+        $allPosts = $this->getAllPosts();
+
+       return var_dump($allPosts);
     }
 
 
@@ -29,6 +31,20 @@ class PostsController extends Controller
         ];
 
         return view('/welcome', $viewData);
+    }
+
+
+    public function getAllUsers() {
+        $allUsers = User::get();
+
+        return $allUsers;
+    }
+
+
+    public function getAllPosts() {
+        $allPosts = Post::get();
+
+        return $allPosts;
     }
 
 
