@@ -3,46 +3,54 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Faker\Factory;
 use App\Models\Post;
 use App\User;
 
 class PostsController extends Controller
 {
     public function index() {
-        $allPosts = $this->getAllPosts();
-    }
-
-
-    public function userPage($id) {
         $loggedInUser = request()->user();
-
-        $thisUser = $this->getThisUser($id);
         $peopleYouMayKnow = $this->getPeopleYouMayKnow($loggedInUser);
-        $posts = $this->getPosts($thisUser);
+        $allPosts = $this->getAllPosts();
 
         $viewData = [
             'loggedInUser' => $loggedInUser,
-            'user' => $thisUser,
             'peopleYouMayKnow' => $peopleYouMayKnow,
-            'posts' => $posts,
+            'posts' => $allPosts
         ];
 
         return view('/welcome', $viewData);
     }
 
 
-    public function getAllUsers() {
-        $allUsers = User::get();
+    public function getAllPosts() {
+        $allPosts = Post::orderBy('created_at', 'desc')->get();
 
-        return $allUsers;
+        return $allPosts;
     }
 
 
-    public function getAllPosts() {
-        $allPosts = Post::get();
+    public function getPeopleYouMayKnow($loggedInUser) {
+        return User::where('id', '!=', $loggedInUser->id)->get();
+    }
+    
 
-        return $allPosts;
+
+
+
+    public function userPage($id) {
+        $loggedInUser = request()->user();
+
+        $thisUser = $this->getThisUser($id);
+        $posts = $this->getPosts($thisUser);
+
+        $viewData = [
+            'loggedInUser' => $loggedInUser,
+            'user' => $thisUser,
+            'posts' => $posts,
+        ];
+
+        return view('/user_page', $viewData);
     }
 
 
@@ -51,16 +59,15 @@ class PostsController extends Controller
 
         return $thisUser;
     }
-
-
-    public function getPeopleYouMayKnow($loggedInUser) {
-        return User::where('id', '!=', $loggedInUser->id)->get();
-    }
-
+ 
     
     public function getPosts($user) {
-        $posts = Post::where('user_id', $user->id)->get();
+        $posts = Post::where('user_id', $user->id)->orderBy('created_at', 'desc')->get();
 
         return $posts;
     }
 }
+
+
+    
+        

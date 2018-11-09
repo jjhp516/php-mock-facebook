@@ -36,12 +36,12 @@ class ProfileController extends Controller
         $formData = request()->all();
 
         request()->validate([
-            'occupation' => 'nullable|max:255',
-            'education' => 'nullable|max:255',
-            'location' => 'nullable|max:255',
-            'hometown' => 'nullable|max:255',
-            'pic' => 'nullable|max:255',
-            'coverPic' => 'nullable|max:255',
+            'occupation' => 'nullable',
+            'education' => 'nullable',
+            'location' => 'nullable',
+            'hometown' => 'nullable',
+            'pic' => 'nullable',
+            'coverPic' => 'nullable'
         ]);
 
         $profile = $user->profile;
@@ -58,6 +58,6 @@ class ProfileController extends Controller
         $profile->save();
 
 
-        return redirect("/profile");
+        return redirect($user->id);
     }
 }

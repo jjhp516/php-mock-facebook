@@ -11,13 +11,22 @@
 |
 */
 
-Route::get('/', 'PostsController@index');
+Auth::routes();
+
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/profile', 'ProfileController@index');
 Route::post('/profile', 'ProfileController@update');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'PostsController@index');
+
+
+// Route::get('/newpost', 'NewPostController@index');
+// Route::get('/newpost', 'NewPostController@makePost');
+
 Route::get('/{id}', 'PostsController@userPage');
+
+
